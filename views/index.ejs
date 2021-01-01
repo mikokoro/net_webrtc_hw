@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>WebRTC Video Call</title>
+	<link rel='stylesheet' href='/stylesheets/style.css' />
+</head>
+<body>
+
+	<div class="login-container">
+		<input type="text" placeholder="Key in your name" class="login-name" id="login-name" />
+		<button class="login-btn" id="login-btn">Login</button>
+	</div>
+	
+	<div class="video-talk-container">
+		<div class="login-users-container">
+			<ul id="login-users"></ul>
+		</div>
+
+		<div class="video-container">
+			<div class="local-video-wrapper">
+				<label class="title">Local Video</label>
+				<video id="local-video" class="local-video" autoplay></video>
+			</div>
+			<div class="remote-video-wrapper">
+				<label class="title">Remote Video</label>
+				<video id="remote-video" autoplay></video>
+			</div>
+		</div>
+	</div>
+	
+	<script src="/socket.io/socket.io.js"></script>
+	<script src="/javascripts/client.js"></script>
+</body>
+</html>
